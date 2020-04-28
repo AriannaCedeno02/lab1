@@ -12,7 +12,7 @@ def talker():
         pub.publish(random_str)
         rospy.sleep(5.)
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     try:
         talker()
     except rospy.ROSInterruptException:
