@@ -3,7 +3,7 @@
 import rospy, random
 from std_msgs.msg import String
 
-def talker():
+def talkers():
     pub = rospy.Publisher('chatter', String, queue_size=10)
     rospy.init_node('talker', anonymous=True)
     while not rospy.is_shutdown():
@@ -14,6 +14,6 @@ def talker():
 
 if __name__ == '_main_':
     try:
-        talker()
+        talkers()
     except rospy.ROSInterruptException:
         pass
